@@ -1,0 +1,16 @@
+{
+  "system_name": "Payroll-System",
+  "targets": { "rto_minutes": 30, "rpo_minutes": 15 },
+  "db": {
+    "engine": "PostgreSQL",
+    "multi_az": true,
+    "backup_retention_days": 7,
+    "pitr_enabled": false,
+    "cross_region_replication": "none",
+    "replica_lag_p95_seconds": 200
+  },
+  "infra": {
+    "dns_failover": false,
+    "dr_region": "us-east-2"
+  }
+}
